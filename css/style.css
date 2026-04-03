@@ -1,0 +1,33 @@
+body { font-family: Arial; margin:20px; }
+
+nav a { margin-right:10px; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:10px;
+}
+
+.product {
+  border:1px solid #ccc;
+  padding:10px;
+}
+
+.timer {
+  font-size:30px;
+  color:red;
+}
+
+.low {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity:0; }
+}
+
+@media(max-width:600px){
+  .container {
+    grid-template-columns:1fr;
+  }
+}
