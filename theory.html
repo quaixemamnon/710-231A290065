@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Lý thuyết</title>
+
+<style>
+body {
+  font-family: Arial;
+  line-height: 1.6;
+  margin: 20px;
+}
+h2 {
+  color: blue;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Phần Lý thuyết</h1>
+
+<h2>Câu 1</h2>
+<p>
+position: relative giữ vị trí ban đầu và dịch chuyển theo chính nó, còn
+position: absolute định vị theo phần tử cha gần nhất.
+</p>
+
+<pre>
+.box { position: relative; }
+.btn { position: absolute; top:0; right:0; }
+</pre>
+
+<p>
+Nếu dùng absolute không hợp lý sẽ bị lệch layout khi responsive.
+</p>
+
+<hr>
+
+<h2>Câu 2</h2>
+<p>
+Domain là tên website, hosting là nơi lưu code, DNS chuyển domain thành IP.
+</p>
+
+<pre>
+Đăng ký domain → trỏ DNS → upload code
+</pre>
+
+<p>
+Có thể dùng GitHub Pages, Netlify. Nếu sai DNS sẽ không truy cập được.
+</p>
+
+<hr>
+
+<h2>Câu 3</h2>
+<p>
+var có function scope, let và const có block scope.
+</p>
+
+<pre>
+for (var i=0;i<3;i++){
+ setTimeout(()=>console.log(i),1000);
+}
+</pre>
+
+<p>Kết quả: 3 3 3</p>
+
+<hr>
+
+<h2>Câu 4</h2>
+<p>
+Event Delegation là gán sự kiện cho phần tử cha.
+</p>
+
+<pre>
+document.getElementById("list").addEventListener("click", e=>{
+ if(e.target.tagName==="LI"){
+  alert(e.target.innerText);
+ }
+});
+</pre>
+
+<p>
+Giúp tối ưu hiệu suất và xử lý danh sách động.
+</p>
+
+</body>
+</html>
